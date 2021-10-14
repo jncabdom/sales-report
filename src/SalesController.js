@@ -1,20 +1,16 @@
 import fs from "fs"
-import { SalesCalculator } from "./SalesCalculator.js"
-import { SalesParser } from "./SalesParser.js"
+import { SalesService } from "./SalesService.js";
 
 
 export class SalesController {
   constructor() {
-    this.SalesCalculator = new SalesCalculator();
-    this.SalesParser = new SalesParser();
+    this.SalesService = new SalesService();
   }
   async generateSalesReport() {
     const file = fs.readFileSync(process.argv[2], "utf8");
 
     try {
-      const parsedValues = this.SalesParser.parse(file);
-      const totalSales = this.SalesCalculator.getSalesReport(parsedValues);
-      console.log(totalSales);
+      const totalSales = this.SalesService.calculateIncome(file)
       fs.writeFileSync(
         "./report.txt",
         `Tus ventas totales han sido ${totalSales}$`,
