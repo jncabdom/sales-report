@@ -10,8 +10,8 @@ export class SalesParser {
     for (let element of data) {
       parsedData.push(Object.fromEntries([
         ["name", element[0]],
-        ["price", parseInt(element[1])],
-        ["quantity", parseInt(element[2])]]));
+        ["price", parseFloat(element[1])],
+        ["quantity", parseFloat(element[2])]]));
     }
 
     return parsedData;
