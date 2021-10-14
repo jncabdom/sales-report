@@ -1,9 +1,9 @@
 import { SalesCalculator } from "./SalesCalculator";
 
 const exampleInput = [
-  ["pan", "1", "2"],
-  ["pack de 12 huevos","1","2"],
-  ["milk", "2", "6"],
+  { name: "pan", price: 1, quantity: 2 },
+  { name: "pack de 12 huevos", price: 1, quantity: 2 },
+  { name: "milk", price: 2, quantity: 6 },
 ]
 
 describe("SalesCalculator", () => {

@@ -3,7 +3,7 @@ export class SalesCalculator {
   getSalesReport(dataArray) {
     let result = 0;
     dataArray.forEach(element => {
-      result += (parseInt(element[1]) * parseInt(element[2]));
+      result += (element.price * element.quantity);
     });
     return result;
   }
