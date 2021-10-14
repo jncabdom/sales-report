@@ -1,15 +1,14 @@
-# Money Format
+# Sales Report
 
-En este ejercicio implementaremos un formateador de dinero, de forma que la salida
-esperada será la siguiente:
+Generates a sales report with given input.
 
-```js
-const value1 = moneyFormat(19.99)
-console.log(value1) // $19.99
+Input example: 
+(format: name,price,quantity)
+----- sales.csv -------
+bread,1,2
+flour,3,1.5
+broom,5,3
 
-const value2 = moneyFormat(250)
-console.log(value2) // $250.00
+Result: 21.5$
 
-const value3 = moneyFormat(9500.95)
-console.log(value3) // $9,500.95
-```
+Usage: node main.js today-sales.csv

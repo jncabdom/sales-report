@@ -1,11 +1,12 @@
 import {SalesParser} from "./SalesParser.js"
 
-const exampleInput = `
+const exampleInput =
+  `
 pan,1,2
 pack de 12 huevos,1,2
 milk,2,6
 escoba,2.5,9
-`
+`;
 
 const expectedOutput = [
   { name: "pan", price: 1, quantity: 2 },

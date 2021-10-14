@@ -7,9 +7,8 @@ export class SalesService {
     this.SalesParser = new SalesParser();
   }
 
-  calculateIncome (file) {
-    const parsedValues = this.SalesParser.parse(file);
-    const totalSales = this.SalesCalculator.getSalesReport(parsedValues);
-    return totalSales
+  calculateIncome(file) {
+    return this.SalesCalculator.getSalesReport(
+           this.SalesParser.parse(file));
   }
 }
