@@ -1,4 +1,3 @@
-// recibir archivo como string
 import { SalesService } from "./SalesService.js";
 
 const exampleInput =
