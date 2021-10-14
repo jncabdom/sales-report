@@ -7,9 +7,9 @@ milk,2,6
 `
 
 const expectedOutput = [
-  ["pan","1","2"],
-  ["pack de 12 huevos","1","2"],
-  ["milk","2","6"],
+  ["pan",1,2],
+  ["pack de 12 huevos",1,2],
+  ["milk",2,6],
 ]
 
 describe("SalesParser", () => {
